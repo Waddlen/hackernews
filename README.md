@@ -7,3 +7,7 @@ Run `npm install` to install dependencies, then `ng serve` for a dev server at `
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 Run `ng test` to execute the tests via Karma.
+
+The project is running live on Azure [here](https://mneidighackernews.z13.web.core.windows.net/)
+
+![Screenshot](./screenshot.png)
