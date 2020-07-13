@@ -1,0 +1,20 @@
+<div *ngIf="articles.length > 0; then Loaded else notLoaded"></div>
+<ng-template #notLoaded><mat-spinner></mat-spinner></ng-template>
+<ng-template #Loaded>
+
+<table mat-table [dataSource]="filteredArticles">
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+        <mat-cell *matCellDef="let i = index;"> {{i+1}} </mat-cell>
+    </ng-container>
+
+    <!-- Everything Else Column -->
+    <ng-container matColumnDef="title">
+        <mat-cell *matCellDef="let article"> <h2><a href="{{article.url}}">{{article.title}}</a></h2>
+            <p class="author">by {{article.by}}</p>
+        </mat-cell>
+    </ng-container>
+
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</table>
+</ng-template>
